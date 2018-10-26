@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+html, body {
+	background: #F2EEE2;  
+}
+
+@font-face {
+	font-family: hand-written;
+	src: url('fonts/CONFN___.TTF');
+}
+
+#mainNav {
+	position: relative;
+	padding-bottom: 0;
+}
+
+.navbar-brand {
+	color: #52658F !important;
+	font-size: 2em;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+}
+
+.nav-link {
+	color: #52658F !important;
+	font-size: 1.3em;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+}
+
+.hm-sec-lg {
+	padding: 0;
+/*
+	border:2px solid black;
+	border-radius: 20px;
+	border-color: #52658F;
+*/
+}
+
+.hm-sec-lg img {
+	display: block;
+	margin: auto;
+	width: 16em;
+	height: auto;
+}
+
+.hm-sec-sm {
+	padding-top: 1em;
+}
+
+.hm-sec-sm img {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}

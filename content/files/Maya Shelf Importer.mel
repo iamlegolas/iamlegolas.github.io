@@ -1,0 +1,196 @@
+// Written by Caleb Biasco for Maya 2018 for use with the MARUI VR plugin for Maya
+// NOTE: If you want to try this out on your own version of Maya that is not 2018, change the two "2018" strings below to wherever the user preferences is for your version.
+
+// slash2 and slash4 were written by me using ewertb's blogpost as reference: http://ewertb.soundlinker.com/mel/mel.034.php
+proc string slash2( string $path)
+// Input: Directory path with '/' or '\' slash delimiters.
+// Output: Directory path with '\' slash delimiters.
+{
+  string $slash = "";
+  string $tokens[];
+  int $numTokens = `tokenize $path "\\/" $tokens`;
+  int $i;
+  $slash = $tokens[0];
+  for ( $i = 1; $i < $numTokens; $i++ )
+  {
+    $slash += ("\\\\" + $tokens[$i]);
+  }
+  return $slash;
+}
+proc string slash4( string $path)
+// Input: Directory path with '/' or '\' slash delimiters.
+// Output: Directory path with '\' slash delimiters.
+{
+  string $slash = "";
+  string $tokens[];
+  int $numTokens = `tokenize $path "\\/" $tokens`;
+  int $i;
+  $slash = $tokens[0];
+  for ( $i = 1; $i < $numTokens; $i++ )
+  {
+    $slash += ("\\\\\\\\" + $tokens[$i]);
+  }
+  return $slash;
+}
+string $dir[] = `fileDialog2 -fileMode 3 -caption "Select a folder of models to import, with an \"images\" folder with their thumbnails."`;
+if (`size($dir)` > 0) {
+    string $file_names[] = `getFileList -folder $dir`;
+    string $full_path = "";
+		
+		// CHANGE THE $shelf_folder AND $icon_folder PATHS FOR DIFFERENT VERSIONS OF MAYA
+    string $shelf_folder = toNativePath(getenv("MAYA_APP_DIR")) + "\\2018\\prefs\\shelves";
+    string $image_folder = $dir[0] + "\\images";
+    string $icon_folder = toNativePath(getenv("MAYA_APP_DIR")) + "\\2018\\prefs\\icons";
+		
+    string $shelf_name = basenameEx($dir[0]);
+    $shelf_name = substituteAllString($shelf_name, " ", "_");
+		
+    string $shelf = $shelf_folder + "\\shelf_" + $shelf_name + ".mel";
+		
+    string $script_env = getenv("MAYA_SCRIPT_PATH");
+    string $shelf_env = getenv("MAYA_SHELF_PATH");
+		
+    if (strcmp(match($shelf_folder, $script_env), "") == 0) {
+        $script_env = $script_env + ";" + $shelf_folder;
+        putenv("MAYA_SCRIPT_PATH", $script_env);
+    }
+    if (strcmp(match($shelf_folder, $shelf_env), "") == 0) {
+        $shelf_env = $shelf_env + ";" + $shelf_folder;
+        putenv("MAYA_SHELF_PATH", $shelf_env);
+    }
+		
+    print("\nScript Env: " + $script_env + "\n");
+    print("\nShelf Env: " + $shelf_env + "\n");
+		
+    string $file_types[] = {"ma", "mb", "fbx", "obj", "stl"};
+    if (`size($file_names)` > 0) {
+		
+        if (`filetest -e $shelf` == 0 ||
+            `confirmDialog -title "Shelf exists" -message
+            ("\""+$shelf_name+"\" exists as a shelf, do you want to overwrite it?")
+            -button "Yes" -button "No"
+            -defaultButton "No" -cancelButton "No"
+            -dismissString "No"` == "Yes") {
+						
+            if (`filetest -e $shelf` == 0)
+                sysFile -del $shelf;
+								
+            string $script[] = {};
+						
+            $script[size($script)] =
+                "global proc shelf_" + $shelf_name + " () {\n\n";
+								
+            string $icon = "";
+            string $image = "";
+                
+            for ($file in $file_names) {
+						
+                if (stringArrayContains(fileExtension($file), $file_types)) {
+								
+                    $full_path = $dir[0] + "\\" + $file;
+                    $full_path = toNativePath($full_path);
+										
+                    if (`filetest -e ($image_folder + "\\" + basenameEx($file) + ".jpg")` == 1) {
+                        $image = $image_folder + "\\" + basenameEx($file) + ".jpg";
+                        $icon = $icon_folder + "\\" + basenameEx($file) + ".jpg";
+                        sysFile -copy $icon $image;
+                    }
+                    else if (`filetest -e ($dir[0] + "\\" + basenameEx($file) + ".jpg")` == 1) {
+                        $image = $image_folder + "\\" + basenameEx($file) + ".jpg";
+                        $icon = $icon_folder + "\\" + basenameEx($file) + ".jpg";
+                        sysFile -copy $icon $image;
+                    }
+                    else {
+                        $image = "";
+                        $icon = "";
+                    }
+										
+                    $script[size($script)] =
+                "\t shelfButton \n";
+								
+                    $script[size($script)] =
+                "\t\t -label \t \"" + basenameEx($file) + "\" \n";
+								
+                    $script[size($script)] =
+                "\t\t -annotation \t \"" + basenameEx($file) + "\" \n";
+								
+                    $script[size($script)] =
+                "\t\t -width 35 \n";
+								
+                    $script[size($script)] =
+                "\t\t -height 35 \n";
+								
+                    $script[size($script)] =
+                "\t\t -style \"iconAndTextHorizontal\" \n";
+								
+								    $script[size($script)] =
+								"\t\t -scaleIcon";
+								
+								// This line is used to give every model a generic image; this was due to the MARUI plug-in not allowing user-specified images for shelf icons.
+                //    $script[size($script)] =
+                // "\t\t -image \t \"circleSolid.png\" \n";
+								
+                if (size($icon) > 0)
+                    $script[size($script)] =
+                "\t\t -image \t \"" + basenameEx($file) + ".jpg\" \n";
+								
+                    $script[size($script)] =
+                "\t\t -command \t \"file -i \\\"" + substituteAllString(slash4($full_path), " ", "\\\\ ") + "\\\"\"; \n \n";
+                }
+            }
+						
+            $script[size($script)] = "}";
+						
+            $script_Id = `fopen $shelf "w"`;
+            for ($line in $script) {
+                fprint $script_Id ($line);
+            }
+            fclose $script_Id;
+						
+            int $shelf_exists = `layout -q -ex $shelf_name`;
+            if ($shelf_exists == 1){
+						
+                print "Deleting existing shelf\n";
+								
+                int $n_shelves = `optionVar -q numShelves`;
+                int $shelf_num = 0;
+                for ($shelf_num = 1; $shelf_num <= $n_shelves; $shelf_num++) {
+                    if ($shelf_name == `optionVar -q ("shelfName" + $shelf_num)`) { break; }
+                }
+								
+                for ($i = $shelf_num; $i <= $n_shelves; $i++) {
+                    string $align = "left";
+										
+                    if (`optionVar -ex ("shelfAlign" + ($i+1))`)
+                        $align = `optionVar -q ("shelfAlign" + ($i+1))`;
+												
+                    optionVar
+                        -iv ("shelfLoad" + $i) `optionVar -q ("shelfLoad" + ($i+1))`
+                        -sv ("shelfName" + $i) `optionVar -q ("shelfName" + ($i+1))`
+                        -sv ("shelfAlign" + $i) `optionVar -q ("shelfAlign" + ($i+1))`
+                        -sv ("shelffile" + $i) `optionVar -q ("shelfFile" + ($i+1))`;
+                }
+								
+                optionVar -remove ("shelfLoad" + $n_shelves)
+                    -remove ("shelfName" + $n_shelves)
+                    -remove ("shelfAlign" + $n_shelves)
+                    -remove ("shelfFile" + $n_shelves);
+										
+                $n_shelves--;
+                optionVar -iv numShelves $n_shelves;
+                deleteUI -layout $shelf_name;
+            }
+						
+            loadNewShelf ("shelf_" + $shelf_name + ".mel");
+        }
+    }
+    else if (`filetest -e $dir` == 1) {
+        error("\""+$dir[0]+"\" is not a folder");
+    }
+    else {
+        warning("\""+$dir[0]+"\" is empty");
+    }
+}
+else {
+    print("No folder selected");
+}
