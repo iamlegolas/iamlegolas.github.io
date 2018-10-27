@@ -12,6 +12,10 @@ html, body {
 	src: url('fonts/CONFN___.TTF');
 }
 
+.navbar {
+	padding-bottom: 0;
+}
+
 #mainNav {
 	position: relative;
 	padding-bottom: 0;
@@ -29,13 +33,39 @@ html, body {
 	font-family: 'hand-written', 'Roboto', sans-serif;
 }
 
+.nav-item {
+	text-align: right;
+}
+
+.index-content {
+	margin-top: 12px;
+}
+
+
+
+.btn-custom {
+	background-color: #F8F8F8;
+	border: #52658F;
+	color: #52658F;
+	font-weight: 600;
+	border: 2px solid #52658F;
+}
+
+.btn-custom:hover {
+	background-color: #52658F;
+	border: 2px solid #F8F8F8;
+}
+
+.btn-custom:active {
+	background-color: #333A56 !important;
+	border: 2px solid #F8F8F8;
+}
+
+
+
 .hm-sec-lg {
 	padding: 0;
-/*
-	border:2px solid black;
-	border-radius: 20px;
-	border-color: #52658F;
-*/
+	position: relative;
 }
 
 .hm-sec-lg img {
@@ -44,6 +74,39 @@ html, body {
 	width: 16em;
 	height: auto;
 }
+
+.hm-sec-lg-txt {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	box-shadow:  0 0 10px 10px rgb(242, 238, 226, 0.86);
+	
+	position: absolute;
+	top: 55%;
+	
+	background-color: rgb(242, 238, 226, 0.85);
+}
+
+#hm-sec-lg-name {
+	color: #333A56;
+	font-size: 4em;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+}
+
+#hm-sec-lg-title {
+	color: #333A56;
+	font-size: 2em;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	margin-top: -25px;
+	display: block;
+}
+
+
+
+
+
 
 .hm-sec-sm {
 	padding-top: 1em;
