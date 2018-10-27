@@ -49,6 +49,9 @@ html, body {
 	color: #52658F;
 	font-weight: 600;
 	border: 2px solid #52658F;
+	
+	padding: 10px;
+	margin: 5px;
 }
 
 .btn-custom:hover {
@@ -61,11 +64,19 @@ html, body {
 	border: 2px solid #F8F8F8;
 }
 
+#collapse-close-btn {
+	padding: 4px !important;
+	margin: 0px;
+	margin-top: 10px !important;
+	
+}
+
+
 
 
 .hm-sec-lg {
 	padding: 0;
-	position: relative;
+/*	position: relative;*/
 }
 
 .hm-sec-lg img {
@@ -75,11 +86,11 @@ html, body {
 	height: auto;
 }
 
-.hm-sec-lg-txt {
-	display: block;
+.hm-sec-lg-content {
+/*	display: block;*/
 	margin: auto;
 	width: 100%;
-	height: auto;
+/*	height: auto;*/
 	text-align: center;
 	box-shadow:  0 0 10px 10px rgb(242, 238, 226, 0.86);
 	
@@ -103,6 +114,34 @@ html, body {
 	display: block;
 }
 
+#about-me-collapse {
+	background: #52658F;
+	z-index: 100;
+	position: absolute;
+	border-radius: 10px;
+	color: #F8F8F8;
+	
+	margin: 0% 5%;
+	padding: 5%;
+}
+
+#about {
+/*	margin-right: -5%;*/
+}
+
+
+
+.homepage-text {
+	display: block;
+	margin: 5%;
+	color: #333A56;
+	text-align: center;
+
+/* Got the following off the internet	*/
+	position: relative;
+	top: 43%;
+	transform: translateY(-50%); /* or try 50% */
+}
 
 
 
