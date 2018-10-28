@@ -47,11 +47,14 @@ html, body {
 	background-color: #F8F8F8;
 	border: #52658F;
 	color: #52658F;
-	font-weight: 600;
+	font-weight: 100;
 	border: 2px solid #52658F;
 	
-	padding: 10px;
-	margin: 5px;
+	padding: 10px 10px 3px 10px;
+	margin: 10px;
+	
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	font-size: 1.5em;
 }
 
 .btn-custom:hover {
@@ -64,12 +67,14 @@ html, body {
 	border: 2px solid #F8F8F8;
 }
 
+/*
 #collapse-close-btn {
 	padding: 4px !important;
 	margin: 0px;
 	margin-top: 10px !important;
 	
 }
+*/
 
 
 
@@ -112,6 +117,23 @@ html, body {
 	font-family: 'hand-written', 'Roboto', sans-serif;
 	margin-top: -25px;
 	display: block;
+}
+
+#hm-sec-lg-contact {
+	color: #333A56;
+	font-size: 1.7em;
+	font-weight: 100;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	padding-bottom: -10px;
+}
+
+.hm-sec-link {
+	color: #52658F !important;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	font-size: 1.7em;
+}
+.hm-sec-link:hover {
+	color: #333A56 !important;
 }
 
 #about-me-collapse {
@@ -157,4 +179,19 @@ html, body {
 	width: 100%;
 	height: auto;
 	border-radius: 10px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {	
+	#hm-sec-abt {
+		display: none;
+	}	
+}
+
+@media screen and (min-width: 768px) {	
+	#hm-sec-btn-abt {
+		display: none;
+	}	
 }
