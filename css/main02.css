@@ -47,11 +47,14 @@ html, body {
 	background-color: #F8F8F8;
 	border: #52658F;
 	color: #52658F;
-	font-weight: 600;
+	font-weight: 100;
 	border: 2px solid #52658F;
 	
-	padding: 10px;
+	padding: 10px 15px 1px 15px;
 	margin: 5px;
+	
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	font-size: 1.5em;
 }
 
 .btn-custom:hover {
@@ -95,7 +98,7 @@ html, body {
 	box-shadow:  0 0 10px 10px rgb(242, 238, 226, 0.86);
 	
 	position: absolute;
-	top: 55%;
+	top: 52%;
 	
 	background-color: rgb(242, 238, 226, 0.85);
 }
@@ -114,7 +117,24 @@ html, body {
 	display: block;
 }
 
-#about-me-collapse {
+#hm-sec-lg-contact {
+	color: #333A56;
+	font-size: 1.7em;
+	font-weight: 100;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	padding-bottom: -10px;
+}
+
+.hm-sec-link {
+	color: #52658F !important;
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	font-size: 1.7em;
+}
+.hm-sec-link:hover {
+	color: #333A56 !important;
+}
+
+.collapse-content {
 	background: #52658F;
 	z-index: 100;
 	position: absolute;
@@ -123,7 +143,12 @@ html, body {
 	
 	margin: 0% 5%;
 	padding: 5%;
+	
+	position: relative;
 }
+
+
+
 
 #about {
 /*	margin-right: -5%;*/
@@ -131,7 +156,7 @@ html, body {
 
 
 
-.homepage-text {
+.hm-sec-text {
 	display: block;
 	margin: 5%;
 	color: #333A56;
@@ -148,13 +173,37 @@ html, body {
 
 
 .hm-sec-sm {
-	padding-top: 1em;
+	margin: 1em;
+/*	padding: 0em !important;*/
 }
 
 .hm-sec-sm img {
-	display: block;
-	margin: auto;
+/*	display: block;*/
+/*	margin: auto;*/
 	width: 100%;
-	height: auto;
+/*	height: auto;*/
 	border-radius: 10px;
+}
+
+.hm-sec-sm-row {
+/*	margin: 0px !important;*/
+/*	padding: 0px;*/
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {	
+	#hm-sec-abt {
+		display: none;
+	}	
+}
+
+@media screen and (min-width: 768px) {	
+	#hm-sec-btn-abt {
+		display: none;
+	}	
 }
