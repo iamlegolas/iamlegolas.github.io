@@ -100,7 +100,7 @@ html, body {
 	box-shadow:  0 0 10px 10px rgb(242, 238, 226, 0.86);
 	
 	position: absolute;
-	top: 55%;
+	top: 52%;
 	
 	background-color: rgb(242, 238, 226, 0.85);
 }
@@ -170,7 +170,8 @@ html, body {
 
 
 .hm-sec-sm {
-	padding-top: 1em;
+	padding: 1em;
+/*	margin: 1em;*/
 }
 
 .hm-sec-sm img {
@@ -188,6 +189,11 @@ html, body {
 	#hm-sec-abt {
 		display: none;
 	}	
+		
+	.hm-sec-sm {
+		padding: 1em;
+		margin: 0em 1em;
+	}
 }
 
 @media screen and (min-width: 768px) {	
