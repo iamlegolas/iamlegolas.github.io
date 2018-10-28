@@ -182,6 +182,19 @@ html, body {
 	border-radius: 10px;
 }
 
+.hm-sec-sm-text {
+	display: block;
+/*	margin: 5%;*/
+	color: #52658F;
+	text-align: center;
+}
+
+.hm-sec-sm-text-title {
+	font-weight: 600;
+	font-size: 1.5em;
+	color: #333A56;
+}
+
 
 
 
