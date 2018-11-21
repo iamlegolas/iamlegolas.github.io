@@ -67,6 +67,26 @@ html, body {
 	border: 2px solid #F8F8F8;
 }
 
+
+.btn-back {
+	background-color: #333A56 !important;
+	color: #F8F8F8;
+	
+	padding: 10px 10px 3px 10px;
+	margin: 10px;
+	
+	font-family: 'hand-written', 'Roboto', sans-serif;
+	font-size: 1.5em;
+	font-weight: 100;
+	border: 2px solid #F8F8F8;
+}
+
+.btn-back:hover {
+	background-color: #F8F8F8 !important;
+	color: #333A56 !important;
+	border: 2px solid #333A56;
+}
+
 /*
 #collapse-close-btn {
 	padding: 4px !important;
@@ -137,7 +157,8 @@ html, body {
 }
 
 #about-me-collapse {
-	background: #52658F;
+/*	background: #52658F;*/
+	background: rgb(82, 101, 143, 0.95);
 	z-index: 100;
 	position: absolute;
 	border-radius: 10px;
@@ -158,6 +179,7 @@ html, body {
 	margin: 5%;
 	color: #333A56;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 
 /* Got the following off the internet	*/
 	position: relative;
@@ -181,12 +203,16 @@ html, body {
 	height: auto;
 	border-radius: 10px;
 }
+.hm-sec-sm img:hover {
+	opacity: 0.5;
+}
 
 .hm-sec-sm-text {
 	display: block;
 /*	margin: 5%;*/
 	color: #52658F;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 
 .hm-sec-sm-text-title {
@@ -194,8 +220,92 @@ html, body {
 	font-size: 1.5em;
 	color: #333A56;
 }
+.hm-sec-sm-text-title:hover {
+	color: #333A56;
+}
+
+.hm-sec-sm-text-hashtags {
+	font-size: 0.9em;
+	font-weight: 500;
+	color: #333A56;
+}
+
+.hm-sec-sm-text-desc {
+	font-size: 1.1em;
+	font-weight: 100;
+	color: #333A56;
+	margin: 10px;
+}
 
 
+/* PROJECT PAGES */
+
+.project-content {
+	margin-top: 1.5em;
+	text-align: center;
+}
+
+.project-title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #333A56;
+}
+
+.project-details {
+	background: #333A56;
+	margin-top: 0.5em;
+	padding: 1.5em;
+	border-radius: 10px;
+	
+	
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	color: #F8F8F8;
+}
+
+.detail-section {
+	font-weight: 600;
+}
+
+.project-writeup {
+	margin: 2em;
+	color: #333A56;
+	font-size: 1.05em;
+	text-align: left;
+}
+
+.takeaways-title {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.takeaways-list {
+	margin-left: 5%;
+}
+
+.project-media {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+
+.project-media iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.media-description {
+	font-size: 0.8em;
+	text-align: left;
+	font-weight: 500;
+	margin: 0% 12%;
+}
 
 
 @media screen and (max-width: 767px) {	
