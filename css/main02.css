@@ -125,13 +125,13 @@ html, body {
 	background-color: rgb(242, 238, 226, 0.85);
 }
 
-#hm-sec-lg-name {
+.hm-sec-lg-name {
 	color: #333A56;
 	font-size: 4em;
 	font-family: 'hand-written', 'Roboto', sans-serif;
 }
 
-#hm-sec-lg-title {
+.hm-sec-lg-title {
 	color: #333A56;
 	font-size: 2em;
 	font-family: 'hand-written', 'Roboto', sans-serif;
@@ -323,4 +323,56 @@ html, body {
 	#hm-sec-btn-abt {
 		display: none;
 	}	
+}
+
+
+.filterDiv {
+	display: none;
+}
+
+.show {
+   display: block;
+}
+
+.container {
+	overflow: hidden;
+}
+
+#myBtnContainer {
+	align-content: center;
+	display: block;
+	text-align: center;
+	margin-top: 2%;
+}
+
+.hm-sec-title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+	color: #333A56;
+	text-decoration: overline;
+}
+
+#hm-sec-btn-row {
+	margin: 1.5% 0% 3% 0%;
+}
+
+.fil-elem-txt {
+	margin: 0% 1%;
+	padding: 1%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 1.2em;
+	color: #F8F8F8;
+/*	text-decoration: underline;*/
+	background-color: #52658F;
+	border-radius: 10px;
+}
+
+.fil-elem-txt:hover {
+	background-color: #333A56;
+}
+
+.fil-elem-text:visited {
+	border-style: inset;
 }
