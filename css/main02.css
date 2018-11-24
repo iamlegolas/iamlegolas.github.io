@@ -335,6 +335,10 @@ html, body {
 		padding: 1em;
 		margin: 0em 1em;
 	}
+	
+	.project-media-img {
+	width: 60%;
+	}
 }
 
 @media screen and (min-width: 768px) {	
