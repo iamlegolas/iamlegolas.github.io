@@ -16,6 +16,12 @@
 <!--		<link href="css/main.css" rel="stylesheet">
 -->
 
+		<!--	Footer Icons	-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i,700,700i,900" rel="stylesheet">
+		
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i,700,700i,900" rel="stylesheet">
 		
   </head>
@@ -38,7 +44,7 @@
 							<a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Portfolio</a>
+							<a class="nav-link" href="../index.html#myBtnContainer">Portfolio</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="../docs/181113_Resume.pdf" target="_blank">Resume</a>
@@ -59,7 +65,7 @@
 						<div class="row">
 							<div class="col-lg"> <span class="detail-section">When: </span> July 2016 - August 2016</div>
 							<div class="col-lg"> <span class="detail-section">Where: </span> <a href="https://happern.ku.edu.tr/projects-2/sar-for-indoor-use/">Koç University Design Lab</a>, Istanbul<br /> </div>
-							<div class="col-lg"> <span class="detail-section">Role: </span> Programmer </div>
+							<div class="col-lg"> <span class="detail-section">Role: </span> Software Engineer </div>
 						</div>
 						<br />
 						<div class="row">
@@ -70,31 +76,33 @@
 					</div>
 					
 					<div class="project-writeup">
+	
+						PhD project supervised by <a href="http://ku.academia.edu/asimevrenyantac" target="_blank">Dr. Asım Evren Yantaç</a>, aimed at exploring everyday indoor applications of Projection Mapping and Spatial Augment Reality. Project Page: <a href="https://happern.ku.edu.tr/projects-2/sar-for-indoor-use/" target="_blank">Spatial Augmented Reality for Indoor Use</a>
+						
+						<br /><br />
 						
 						
-<!--						https://www.youtube.com/embed/OckOQ4_W48A-->
-<!--
 						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/IdM2Ylxm8nU?autoplay=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/hRN5goha3QA?autoplay=1&mute=1&loop=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 						</div>
--->
+						<span class="media-description m-dsc-center">Above: A frying pan being detected by the program in real time.</span>
+						
+						<br /><br />
+						
+						In the summer of 2016, I was selected as a <b>Software Engineering Intern</b> at the <b>Koç University Arçelik Research (KUAR) design lab</b> to begin development on a desktop application employing use of Computer Vision, Machine Learning and Spatial Augmented Reality.
+						
+						<br /><br />As the sole engineer on this project, I accomplished the following milestones: 
+						<li>Calibrated a Projector and Kinect using Gene Kogan's Kinect Projection Toolkit.</li> 
+						<li>Wrote a program to detect several kitchen utensils using the Kinect, PyOpenCV and Caffe.</li>
+						<li>Projected bounding boxes onto the utensils' real-world coordinates using the Projector and PyOpenCV.</li> <br/><br/>
+						
 						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/OckOQ4_W48A?autoplay=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/uS6chgSDNg0&mute=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 						</div>
-						<span class=media-description>Above: First 4 minutes of footage from 'The Glassworker'. This was released February, 2018.</span>
-						<div class="media-description">
-							<b>My contributions to the 4 minutes:</b> <br />
-							<li> <b>01:01 - 01:05 :</b> Keyframed, inked and colored the rose.</li>
-							<li> <b>03:28 - 03:37 :</b> Keyframed, inked, colored and shaded the hands.</li>
-							<li> <b>05:31 - 05:35 :</b> Planned, keyframed,  inked, colored and shaded the entire shot.</li>
-							<li> <b>05:56 - 05:58 :</b> Planned, keyframed, inked, colored and shaded the entire shot.</li>
-							<li> <b>06:51 - 06:53 + 06:54 - 06:57 :</b> Inked, colored and shaded the entire shot.</li>
-							<li> <b>10:11 - 10:17 :</b> Planned, keyframed inked, colored and shaded the character in maroon.</li>
-							<li> <b>10:17 - 10:19 :</b> Planned, keyframed inked, colored and shaded all the characters.</li>
-						</div>
+						<span class="media-description m-dsc-center">Above: Project work setup including a table, Kinect and projector + System detecting an object and projecting onto it's real-world coordinates.</span>
 						
-						<br />
-						
+						<br />The project required an immense amount of self study on my part as I familiarized myself with machine learning concepts and tools. Initially, I dealt with utensil detection using cascaded binary classifiers based on Haar-like features in PyOpenCV, and implemented a simple unsupervised confidence-based learning mechanism to reduce the number of false positives. To effectively track these detected utensils and surrounding regions, I implemented a pyramidal frame-to-frame optical flow procedure in Python, which was inspired by the classic Lucas-Kanade optical flow method. 
+						<br />Moving forward with this approach, however, would have had me train separate classifiers for each utensil that I wanted to detect so I changed course looking for other solutions. I elevated to using a model convolutional network (CNN) that had been trained on the ImageNet dataset. ImageNet contains over 15 million high-resolution images belonging to roughly 22,000 categories so it could already detect most utensils on my list. I collected my own datasets for the utensils that were not included in ImageNet.
 <!--
 						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators">
@@ -124,29 +132,22 @@
 						</div>						
 -->
 						
-						“The Glassworker” or “Sheeshagar” is Pakistan’s first hand-drawn animated feature film. The work being produced by Mano Animation Studios has been recognized by Studio Ghibli, Studio Chizu, Studio Ponoc, TED, IGN, Gamespot and more. <br /><br />
 						
-<!--						I applied for an internship at Mano when I had no animation experience whatsoever. I was offered the position based on my illustration portfolio and sheer love for the project Mano was working on. I joined the studio as an intern in the December of 2016. During my internship, I was introduced to Disney’s 12 Principles of Animation, the studio’s animation pipeline, countless learning resources and amazing mentors. <br /><br />-->
-						
-<!--						After a week of training, I was thrown in the deep end to work on a shot for the film. By the end of the internship, I had keyframed hands for a character in one shot, keyframed, cleaned up and colored the film’s iconic glass rose for another shot. The studio offered me a full-time animator position for after I completed my undergraduate degree. <br /><br />-->
-						I interned at Mano in the December of 2016 and was introduced to Disney’s 12 Principles of Animation, the studio’s animation pipeline, countless learning resources and amazing mentors.
-						
-						I joined Mano full-time right after graduating from college in July 2017. I completed several shots for ‘The Glassworker’ and dealt with almost every stage in the animation pipeline, helping Mano to reach it’s milestone of releasing the first 4 minutes of the film and beyond.
 
 				
 						<br /><br />
 						
 						<span class="takeaways-title"> Notable Experiences: </span> <br />
 						<ul class="takeaways-list">
-							<li>Got hands-on experience with almost all phases of the 2D animation pipeline.</li>
-							<li>Understood the importance of having sound knowledge of the fundamentals for any field. Consistently started studying Richard Williams and Andrew Loomis on my own time.</li>
-							<li>Became well-versed in the art of giving and, more importantly, seeking constructive criticism.</li>
-							<li>Collaborated with other creatives to produce work.</li>
-							<li>Successfully adhered to and improved on direction from the Director and Art Director.</li>
-							<li>Learned how to structure work files that are suitable for being passed on to new owners.</li>
-							<li>Improved immensely as an illustrator, storyteller and animator.</li>
+							<li>Developed a strong sense of self efficacy working as the sole programmer in a team of designers.</li>
+							<li>Improved at communicating ideas clearly to non-technical people without the use of jargon.</li>
+							<li>Became considerably experienced with the PyOpenCV and Caffe libraries for Python.</li>
+							<li>Learned how to structure and write code that is better for passing on to new owners indefinitely.</li>
 						</ul>
 
+						<p class="btn-back-container">
+							<a href="../index.html"><button type="button" class="btn btn-primary btn-back">Go Back</button></a>
+						</p>
 						
 					</div>
 					
@@ -154,7 +155,6 @@
 				
 			</div>
 		
-		<div id="footer"></div>
 
 		<script> $(function() {
 			$('#footer').load('../content/templates/footer.html');});
@@ -170,5 +170,14 @@
 		<script type="../text/javascript" src="js/functions.js"></script>
 		
 		</div>
+		
+		<footer class="page-footer text-center">
+			
+				<a title="LinkedIn" href="http://www.linkedin.com/in/mmir" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a title="Instagram" href="http://www.instagram.com/legolasshegolas" target="_blank"><i class="fa fa-instagram"></i></a>
+				<a title="Email" href="mailto:muhammadbintahirmir@gmail.com"><i class="fa fa-envelope"></i></a>
+
+		</footer>
+		
   </body>
 </html>
