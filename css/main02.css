@@ -421,3 +421,13 @@ html, body {
 .fa:hover {
 	color: #333A56;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 60px;
+	width: 30px;
+	color: #333A56;
+	background-color: #333A56;
+	background-clip: border-box;
+	border-radius: 200px;
+}
