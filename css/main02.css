@@ -245,6 +245,15 @@ html, body {
 	text-align: center;
 }
 
+/*
+.project-col {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;	
+}
+*/
+
 .project-title {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
@@ -276,6 +285,8 @@ html, body {
 	text-align: left;
 	display: block;
 /*	align-content: center;*/
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .takeaways-title {
@@ -299,7 +310,7 @@ html, body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 100%;
 	border-radius: 20px;
 }
 
@@ -334,10 +345,6 @@ html, body {
 	.hm-sec-sm {
 		padding: 1em;
 		margin: 0em 1em;
-	}
-	
-	.project-media-img {
-	width: 60%;
 	}
 }
 
