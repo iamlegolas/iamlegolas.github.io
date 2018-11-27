@@ -1,5 +1,5 @@
 filterSelection("featured")
-document.getElementById("ini-active").style.backgroundColor = '#333A56';
+//document.getElementById("ini-active").style.backgroundColor = '#333A56';
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
@@ -39,16 +39,17 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("hm-sec-btn-row");
-var btns = btnContainer.getElementsByClassName("fil-elem-txt");
+//var btnContainer = document.getElementById("hm-sec-btn-row");
+//var btns = btnContainer.getElementsByClassName("fil-elem-txt");
+var btns = document.getElementsByClassName("fil-elem-txt");
 
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active-filter-elem");
-		current[0].style.backgroundColor = '#52658F';
+//		current[0].style.backgroundColor = '#52658F';
     current[0].className = current[0].className.replace(" active-filter-elem", "");
 		
     this.className += " active-filter-elem";
-		this.style.backgroundColor = '#333A56';
+//		this.style.backgroundColor = '#333A56';
   });
 }

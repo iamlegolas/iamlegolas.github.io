@@ -360,7 +360,7 @@ html, body {
 }
 
 .show {
-   display: block;
+  display: block;
 }
 
 .container {
@@ -387,24 +387,46 @@ html, body {
 }
 
 .fil-elem-txt {
+	width: 126px;
 	margin: 0% 0.5%;
 	padding: 1%;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
 	font-size: 1em;
+/*
 	color: #F8F8F8;
-/*	text-decoration: underline;*/
 	background-color: #52658F;
+*/
+	color: #52658F;
+	background-color: #F2EEE2;
 	border-radius: 10px;
+	border: 2px solid #333A56;
+	transition: 0.3s;
 }
 
 .fil-elem-txt:hover {
 	background-color: #333A56;
+	border-color: #333A56;
+	color: #F8F8F8;
 }
 
+.active-filter-elem:hover {
+	background-color: #333A56;
+	border-color: #333A56;
+}
+
+.active-filter-elem{
+	background-color: #333A56;
+	border-color: #333A56;
+	color: #F8F8F8;
+}
+
+
+/*
 .fil-elem-text:visited {
 	border-style: inset;
 }
+*/
 
 .page-footer {
 	background-color: white;
