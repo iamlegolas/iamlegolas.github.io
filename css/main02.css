@@ -123,6 +123,7 @@ html, body {
 	top: 52%;
 	
 	background-color: rgb(242, 238, 226, 0.85);
+	-webkit-appearance: none;
 }
 
 .hm-sec-lg-name {
