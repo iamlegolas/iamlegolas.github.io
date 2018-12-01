@@ -63,7 +63,7 @@
 					
 					<div class="project-details"> 
 						<div class="row">
-							<div class="col-lg"> <span class="detail-section">When: </span> Oct '18 - Nov '18 (2 weeks) </div>
+							<div class="col-lg"> <span class="detail-section">When: </span> Oct '18 - Nov '18 (3 weeks) </div>
 							<div class="col-lg"> <span class="detail-section">Where: </span> Entertainment Technology Center, CMU </div>
 							<div class="col-lg"> <span class="detail-section">Roles: </span> Rigging, Game Design, Animation, 3d Modelling </div>
 						</div>
@@ -73,40 +73,25 @@
 							<div class="col-lg"> <span class="detail-section">Tools: </span> Autodesk Maya, Unity, Perforce</div>
 						</div>
 					</div>
-					
-					<br/><br/><br/><br/><span class="project-title">PAGE UNDER CONSTRUCTION</span><br/><br/><br/><br/>
-					
-<!--
+
 					<div class="col-xxxl-8 col-lg-10 project-writeup">
 						
 						
-						BVW, or <b>Building Virtual Worlds</b>, is the premier course for first years at CMU's Entertainment Technology Center. 
+						'Space Bar' is an asymmetrical co-op bartending experience designed to entertain naive guests at the <a href="http://www.etc.cmu.edu/festival/">2018 ETC Festival</a>. The experience was selected as 1 of the 16 experiences to be showcased at the festival.
+						
+						<br/><br/><b>What is BVW:</b> BVW (or Building Virtual Worlds), is the premier course for first years at CMU's Entertainment Technology Center. It is composed of 5 rounds spread throughout 1 semester. For each round, you're put in a random team of 5 (composed of 2 programmers, 2 artists, 1 sound designer) and the team is tasked with creating a complete AR/VR experience in the span of two weeks. After the 2 weeks, teams are shuffled.
 						<br/><br/><br/>
 						
-						
-						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/lebowski-ink-360.gif">
-						<span class="media-description m-dsc-center">Above: Final 360-turnaround of the design.</span>
+						<div class="project-media">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/fJJ8DqYKe00" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+						</div>
+						<span class="media-description m-dsc-center">Above: A walkthrough of the entire experience.</span>
 							
-						<br />
+						<br /><b>Game Design:</b> We started out with having separate Vive Play Spaces for both guests. Each had access to a unique colored soda and garnish. They'd have to communicate to fulfill orders. With this version of the game, the division of labor seemed forceful and wasn't something the world absolutely demanded. Throwing garnishes all the way over to the other player's Play Space was also hectic and punished guests way too often.
+						<br />We quickly switched to having both guests in a single Play Space and kept everything else as before. With this, the multiplayer nature of the experience felt unnecessary. 
+						<br />For the next iteration, we defined more distinct roles for each guest; 1 was incharge of the sodas, the other for the garnishes. The soda guest had too easy a time filling the glasses. To solve this, we moved the soda guest to a higher virtual location making the soda-dispensing more challenging. For the interest curve and making the soda guest's life more challenging, we had the garnish dispensers catch fire and become useless based on how good the guests did. At this stage, it was just a lot of iteration for balance.
 						
-						In the December of 2018, during a routine rewatch of 'The Big Lebowski', I had the strongest and most sudden urge to animate 'The Dude' in a sequence from the film. I decided to go with a dialogue and acting intensive scene because I had not, till this point, had the opportunity to animate dialogue for '<a href="glassworker02.html" target="_blank">The Glassworker</a>', the feature film I was working on as a traditional animator.
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/efDi37e5wPk" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-						</div>
-						<span class="media-description m-dsc-center">Above: The sequence I chose to animate.</span>
-						
-						<br/>Having chosen the scene, my inspired and eager self immediately transitioned to the drawing board and laid out keyframes describing how I wanted everything to play out.
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/7Cgp_gYh24I" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-						</div>
-						<span class="media-description m-dsc-center">Above: 1st iteration of the keyframes.</span>
-				
-						<br />
-						I sought feedback for these drawings and realized the design lacked appeal among other things. The drawings also lacked solid form and volume preservation. I decided to go back to the absolute basics: At least an hour a day on exercises at <a href="drawabox.com" target="_blank">drawabox.com</a> to strengthen my grip on the fundamentals of art coupled with exercises and theory for character design, courtesy of Aaron Blaise. All the while, I continued iterating on the design for the character and kept thumbnailing new ways for the animation to play out. I'd constantly seek out feedback on everything from mentors and other animators too.
+						<br/><br/><b>Art:</b> As artist, I came up with several character designs for crazy looking aliens with personality. Given the timeline though, we restricted ourselves to just one character in an effort to manage scope.
 						
 						<br/><br/><br/>
 						
@@ -132,17 +117,16 @@
 								<span class="sr-only">Next</span>
 							</a>
 						</div>						
-
 						<span class="media-description m-dsc-center">Above: Character design brainstorms and sketches.</span>
 						
-						<br/>As practice (and also an expression of my love for Alex Turner), I took a break from Lebowski and tested my newly acquired knowledge of character design and solid constructional drawing by commiting to complete a 360 turnaround for a character design of Alex. I was satisfied with the result.
+						<br /><br />Blob (pronounced Bob because the 'l' is silent) was the character I chose for the world. With Blob, I took the opportunity to implement a rig that supported squash and stretch. Blob's spine was driven by an IK spline which gave him realistic shoulder and hip movement. He was also given an FK spine for more minute control over different sections of his spine.
+						<br/>Once the basic skeleton, controls and IK handles were set up, I proceeded to add the stretch and squash. Basically, I wanted the spine joints to scale alongside the curve of the IK spline. Used 'Node Editor' for the IK spline's curve, created a 'Spine Info' node to get the real-time height of the spline curve. Dividing this value by the curve's original length using a 'MultiplyDivide Node', I was able to deduce the percentage change in length of the curve. Then, I simply applied this change to the appropriate axis of the scale value for all of Blob's spine joints. For volume preservation, I inversely scaled the other two axis of the scale value for Blob's spine.
 						
 						<br/><br/><br/>
-						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/alex-rough+ink-360.gif">
+						*Add video for rig's squash and stretch functionality*
+						<span class="media-description m-dsc-center">Above: A showcase of the rig's squash and stretch functionality.</span>
 						
-						<span class="media-description m-dsc-center">Above: 360 turnaround of Alex Turner's face. The end goal was to achieve a certain level of likeness in the design while restricting myself to the use of basic shapes. This allows for the design to be easily animated.</span>
-						
-						<br/>The daily exercises were paying off; I could sense improvement. I'd quite consistently spend time on the project and sometime in the February of 2018, a design just clicked. I finalized and executed it immediately.
+						<br/>I animated the character and exported a single FBX accompanied by a text file with frame-by-frame breakdowns of all the animations. My final task regarding Blob was to import him into Unity for the programmers. <b>This is where trouble arose.</b>
 						
 						<br/><br/><br/>
 						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/lebowski-rough+ink-360.gif">
@@ -182,7 +166,6 @@
 						</p>
 						
 					</div>
--->
 					
 				</div>
 				
