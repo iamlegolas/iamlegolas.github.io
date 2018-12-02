@@ -63,47 +63,27 @@
 					
 					<div class="project-details"> 
 						<div class="row">
-							<div class="col-lg"> <span class="detail-section">When: </span> October 2018 </div>
+							<div class="col-lg"> <span class="detail-section">When: </span> October 2018 (2 weeks) </div>
 							<div class="col-lg"> <span class="detail-section">Role: </span> Rigging, Python Scripting </div>
 						</div>
 					</div>
-		
-					<br/><br/><br/><br/><span class="project-title">PAGE UNDER CONSTRUCTION</span><br/><br/><br/><br/>
+
 					
-<!--
 					<div class="col-xxxl-8 col-lg-10 project-writeup">
 						
+						This was an independent study aimed at familiarizing myself with an effective rigging workflow in Maya. The end goal of this study was to have a functional bi-pedal rig that adhered to several best-rigging-practices I discovered during my online research.
 						
-						This was an independent study aimed at exercising fundamentals of character design for 2d animation, solid constructional drawing and my love for the Coen Brothers.
+						
 						<br/><br/><br/>
-						
-						
-						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/lebowski-ink-360.gif">
-						<span class="media-description m-dsc-center">Above: Final 360-turnaround of the design.</span>
+						<div class="project-media">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/q6RpZS85iCs?autoplay=1&loop=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+						</div>
+						<span class="media-description m-dsc-center">Above: Weight dance animation for the final rigged model.</span>
 							
 						<br />
-						
-						In the December of 2018, during a routine rewatch of 'The Big Lebowski', I had the strongest and most sudden urge to animate 'The Dude' in a sequence from the film. I decided to go with a dialogue and acting intensive scene because I had not, till this point, had the opportunity to animate dialogue for '<a href="glassworker02.html" target="_blank">The Glassworker</a>', the feature film I was working on as a traditional animator.
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/efDi37e5wPk" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-						</div>
-						<span class="media-description m-dsc-center">Above: The sequence I chose to animate.</span>
-						
-						<br/>Having chosen the scene, my inspired and eager self immediately transitioned to the drawing board and laid out keyframes describing how I wanted everything to play out.
+						I started out by laying down the joint skeleton, paying special attention to the joint orientations. A great amount of attention was given to following a naming convention for the joints. I used an open-source MEL script to automate renaming groups of joints.
 						
 						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/7Cgp_gYh24I" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-						</div>
-						<span class="media-description m-dsc-center">Above: 1st iteration of the keyframes.</span>
-				
-						<br />
-						I sought feedback for these drawings and realized the design lacked appeal among other things. The drawings also lacked solid form and volume preservation. I decided to go back to the absolute basics: At least an hour a day on exercises at <a href="drawabox.com" target="_blank">drawabox.com</a> to strengthen my grip on the fundamentals of art coupled with exercises and theory for character design, courtesy of Aaron Blaise. All the while, I continued iterating on the design for the character and kept thumbnailing new ways for the animation to play out. I'd constantly seek out feedback on everything from mentors and other animators too.
-						
-						<br/><br/><br/>
-						
 						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators">
 								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -111,10 +91,10 @@
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block w-100" src="../content/images/portfolio/lebowski/char-design-iter-01.png" alt="First slide">
+									<img class="d-block w-100" src="../content/images/portfolio/bipedal-rig/gruf-rig-01.png" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="../content/images/portfolio/lebowski/char-design-iter-02.png" alt="Second slide">
+									<img class="d-block w-100" src="../content/images/portfolio/bipedal-rig/gruf-rig-03.png" alt="Second slide">
 								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -126,47 +106,22 @@
 								<span class="sr-only">Next</span>
 							</a>
 						</div>						
+						<span class="media-description m-dsc-center">Above: Joint Orientations and Controllers for the rig.</span>
+						
+						<br/>I ultimately had two skeletons for this rig. I duplicated the original skeleton to be contrained to joint controls. Each joint in the ‘Joint Control Skeleton’ (JNTskel) was constrained to it’s corresponding joint on the ‘Deformation Skeleton’ (DEFskel) with the use of a custom Python script I wrote. I bound DEFskel to the skin while all the controls were constrained to JNTskel. This gave me the freedom to make changes to the control structure without having to unbind the skin later on if the need ever arose. This dual-skeleton structure also allows for easier baking of animations later down the road by baking the animation to DEFskel and deleting the control structures bound to JNTskel before exporting the model to game engines.
 
-						<span class="media-description m-dsc-center">Above: Character design brainstorms and sketches.</span>
 						
-						<br/>As practice (and also an expression of my love for Alex Turner), I took a break from Lebowski and tested my newly acquired knowledge of character design and solid constructional drawing by commiting to complete a 360 turnaround for a character design of Alex. I was satisfied with the result.
-						
-						<br/><br/><br/>
-						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/alex-rough+ink-360.gif">
-						
-						<span class="media-description m-dsc-center">Above: 360 turnaround of Alex Turner's face. The end goal was to achieve a certain level of likeness in the design while restricting myself to the use of basic shapes. This allows for the design to be easily animated.</span>
-						
-						<br/>The daily exercises were paying off; I could sense improvement. I'd quite consistently spend time on the project and sometime in the February of 2018, a design just clicked. I finalized and executed it immediately.
-						
-						<br/><br/><br/>
-						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/lebowski-rough+ink-360.gif">
-						<span class="media-description m-dsc-center">Above: Final rough and inked 360 turnarounds of The Dude.</span>
-						
-						<br/>The design was complete. It was getting a lot of positive feedback from my mentors and the general public. I proceeded to the animation at this stage. I also started rereading Richard Williams' 'The Animator's Survival Kit' to brush up on the 12 Principles of Animation. 
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/A5TSVF_MFYY" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-						</div>
-						<span class="media-description m-dsc-center">Above: 2nd iteration of the animation with the new character design. I knew the accents needed more "OOMPH". They weren't making use of the entire body.</span>
-						
-						<br/>Feedback suggested the key's were somewhat alright but the movement in the inbetweens lacked curves. It was too stiff. The entire animation was also missing anticipation and follow-through on the keys. Another suggestion was to have more easing-in and out for the starting, ending and transitions between actions. 
-						<br/>The criticism was spot on and reinforced the need to study Williams' 'The Animator's Survival Kit' even more. I decided to start from scratch.
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/XEQRrQzjWyk" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-						</div>
-						<span class="media-description m-dsc-center">Above: 3rd iteration based the feedback I recieved: 3 keys with the first two inbetweened.</span>
-						
-						<br/>This is where the animation currently stands. I need keyframes for the entire sequence to get a more tangible sense of how the acting and accents are going to play out. Then I need to inbetween everything.
-						
+						<br/><br/>I followed this with creating a spline IK handle for the spine, IK legs, FK/IK switchable arms, finger controls, eye-targeting and controls bound to JNTskel for all the handles and joints. I used the Connection Editor to add attributes to controllers for individual fingers on both hands allowing me to swith between different set poses.
+
+						<br/>Finally, I keyed the character in several extreme poses and weight painted it.						
 						
 						<br/><br/><span class="takeaways-title"> Notable Experiences: </span> <br />
 						<ul class="takeaways-list">
-							<li>Built up a habit of consistently studying and practicing the fundamentals of art and animation.</li>
-							<li>Constantly sought, recieved and iterated on feedback and constructive criticism.</li>
-							<li>Improved immensely as an artist, designer and animator.</li>
+							<li>Recorded entire process so I can learn from and iterate on the workflow.</li>
+							<li>Became considerably comfortable with writing Python scripts for Maya.</li>
+							<li>Became significantly experienced with Maya’s ‘Connection Editor’ menu, ‘Set Driven Key’ menu, IK handles and constraints.</li>
+							<li>Discovered the plethora of online open-source MEL and Python scripts for Python to study, use and augment.</li>
+							<li>Realized I needed more knowledge and know-how of weight painting for more natural deformations. </li>
 						</ul>
 
 						<br />
@@ -176,7 +131,6 @@
 						</p>
 						
 					</div>
--->
 					
 				</div>
 				
