@@ -81,7 +81,6 @@
 						
 						<br/><br/><b>What is BVW:</b> BVW (or Building Virtual Worlds), is the premier course for first years at CMU's Entertainment Technology Center. It is composed of 5 rounds spread throughout 1 semester. For each round, you're put in a random team of 5 (composed of 2 programmers, 2 artists, 1 sound designer) and the team is tasked with creating a complete AR/VR experience in the span of two weeks. After the 2 weeks, teams are shuffled.
 						<br/><br/><br/>
-						
 						<div class="project-media">
 							<iframe width="800" height="450" src="https://www.youtube.com/embed/fJJ8DqYKe00" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 						</div>
@@ -99,13 +98,21 @@
 							<ol class="carousel-indicators">
 								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block w-100" src="../content/images/portfolio/lebowski/char-design-iter-01.png" alt="First slide">
+									<img class="d-block w-100" src="../content/images/portfolio/bvw5/bvw5-concept-00.jpg" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="../content/images/portfolio/lebowski/char-design-iter-02.png" alt="Second slide">
+									<img class="d-block w-100" src="../content/images/portfolio/bvw5/bvw5-concept-01.jpg" alt="Second slide">
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src="../content/images/portfolio/bvw5/bvw5-concept-02.jpg" alt="Second slide">
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src="../content/images/portfolio/bvw5/bvw5-concept-03.jpg" alt="Second slide">
 								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -123,40 +130,32 @@
 						<br/>Once the basic skeleton, controls and IK handles were set up, I proceeded to add the stretch and squash. Basically, I wanted the spine joints to scale alongside the curve of the IK spline. Used 'Node Editor' for the IK spline's curve, created a 'Spine Info' node to get the real-time height of the spline curve. Dividing this value by the curve's original length using a 'MultiplyDivide Node', I was able to deduce the percentage change in length of the curve. Then, I simply applied this change to the appropriate axis of the scale value for all of Blob's spine joints. For volume preservation, I inversely scaled the other two axis of the scale value for Blob's spine.
 						
 						<br/><br/><br/>
-						*Add video for rig's squash and stretch functionality*
+						<div class="project-media">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/lZikYwPh5p0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+						</div>
 						<span class="media-description m-dsc-center">Above: A showcase of the rig's squash and stretch functionality.</span>
 						
-						<br/>I animated the character and exported a single FBX accompanied by a text file with frame-by-frame breakdowns of all the animations. My final task regarding Blob was to import him into Unity for the programmers. <b>This is where trouble arose.</b>
+						<br/><br/>I animated the character and exported a single FBX accompanied by a text file with frame-by-frame breakdowns of all the animations.
 						
-						<br/><br/><br/>
-						<img class="col-xxxl-8 col-lg-10 project-media-img" src="../content/images/portfolio/lebowski/lebowski-rough+ink-360.gif">
-						<span class="media-description m-dsc-center">Above: Final rough and inked 360 turnarounds of The Dude.</span>
-						
-						<br/>The design was complete. It was getting a lot of positive feedback from my mentors and the general public. I proceeded to the animation at this stage. I also started rereading Richard Williams' 'The Animator's Survival Kit' to brush up on the 12 Principles of Animation. 
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/A5TSVF_MFYY" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+						<br/><br/>
+						<div class="sketchfab-embed-wrapper project-media"><iframe width="640" height="480" src="https://sketchfab.com/models/a88be4c1922546ff9e8d5f97408a4624/embed?autostart=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 						</div>
-						<span class="media-description m-dsc-center">Above: 2nd iteration of the animation with the new character design. I knew the accents needed more "OOMPH". They weren't making use of the entire body.</span>
+						<span class="media-description m-dsc-center">Above:  Walk cycle for posh Blob.</span>
 						
-						<br/>Feedback suggested the key's were somewhat alright but the movement in the inbetweens lacked curves. It was too stiff. The entire animation was also missing anticipation and follow-through on the keys. Another suggestion was to have more easing-in and out for the starting, ending and transitions between actions. 
-						<br/>The criticism was spot on and reinforced the need to study Williams' 'The Animator's Survival Kit' even more. I decided to start from scratch.
-						
-						<br/><br/><br/>
-						<div class="project-media">
-							<iframe width="800" height="450" src="https://www.youtube.com/embed/XEQRrQzjWyk" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+						<br/><div class="sketchfab-embed-wrapper project-media"><iframe width="640" height="480" src="https://sketchfab.com/models/e88ed4f68d4c4455a27c8aa98a85be83/embed?autostart=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 						</div>
-						<span class="media-description m-dsc-center">Above: 3rd iteration based the feedback I recieved: 3 keys with the first two inbetweened.</span>
+						<span class="media-description m-dsc-center">Above:  Walk cycle for commited Blob.</span>
 						
-						<br/>This is where the animation currently stands. I need keyframes for the entire sequence to get a more tangible sense of how the acting and accents are going to play out. Then I need to inbetween everything.
-						
+						<br/><br/><b>Setbacks:</b> My final task regarding Blob was to import him into Unity for the programmers. In Unity I faced what seemed to be an issue of double transformations in the scaling of my geometry mesh (compared to Maya), particularly for areas skinned to joints that had IK spline. 
+						<br/>A check in Unity’s console revealed an FBX import warning saying “Scale Compensation is not supported by Unity”, and that “might result in scale imported incorrectly”, with a list of the affected joints. The solution was to “try disabling Scale Compensation in your file”.
+						<br/>After some research about the issue on the internet, I went back to Maya and turned off thr ‘Segment Scale Compensate’ attribute for all joints associated with the squash/stretch spine. That actually recreated in Maya the double scaling problem I had in Unity, and to solve that I went back to the Node Editor and removed the scaling I'd added to all the children joints. 
+						<br/>This is because ‘Segment Scale Compensate’ (checked by default) tells the joints down a chain to ignore the scale changes of their parent joint(s). When it is unchecked, scaling the top joint in the chain applies the same scaling change to each joint down the chain, even though you don’t see the change in the scale value in the channel box. This is how Unity reads the scaling of the joints, which is why my geometry ended up scaling a whole lot more when I was scaling all the children joints individually in addition to the parent. The scale changes compounded down the chain of joints.
 						
 						<br/><br/><span class="takeaways-title"> Notable Experiences: </span> <br />
 						<ul class="takeaways-list">
-							<li>Built up a habit of consistently studying and practicing the fundamentals of art and animation.</li>
-							<li>Constantly sought, recieved and iterated on feedback and constructive criticism.</li>
-							<li>Improved immensely as an artist, designer and animator.</li>
+							<li>Implemented rig that supports squash and stretch in Maya.</li>
+							<li>Learnt about Unity's limitation with the "Segment Scale Compensate" attribute in Maya.</li>
+							<li>Successfully imported an animated squash and stretch rig from Maya into Unity.</li>
 						</ul>
 
 						<br />
