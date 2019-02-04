@@ -117,13 +117,15 @@ html, body {
 	width: 100%;
 /*	height: auto;*/
 	text-align: center;
-	box-shadow:  0 0 10px 10px rgb(242, 238, 226, 0.86);
 	
 	position: absolute;
 	top: 52%;
 	
-	background-color: rgb(242, 238, 226, 0.85);
+	background-color: rgba(242, 238, 226, 0.85);	
 	-webkit-appearance: none;
+	-moz-box-shadow: 0 0 10px 10px rgba(242, 238, 226, 0.86);
+	-webkit-box-shadow: 0 0 10px 10px rgba(242, 238, 226, 0.86);
+	box-shadow:  0 0 10px 10px rgba(242, 238, 226, 0.86);
 }
 
 .hm-sec-lg-name {
@@ -159,7 +161,7 @@ html, body {
 
 #about-me-collapse {
 /*	background: #52658F;*/
-	background: rgb(82, 101, 143, 0.95);
+	background: rgba(82, 101, 143, 0.95);
 	z-index: 100;
 	position: absolute;
 	border-radius: 10px;
