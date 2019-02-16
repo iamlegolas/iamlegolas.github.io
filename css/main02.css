@@ -456,3 +456,8 @@ html, body {
 	background-clip: border-box;
 	border-radius: 200px;
 }
+
+.blogpost-div {
+	background-color: #52658F;
+	color: #F2EEE2;
+}
