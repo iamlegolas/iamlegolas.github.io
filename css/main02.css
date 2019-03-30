@@ -431,6 +431,14 @@ html, body {
 }
 */
 
+video {
+	border-radius: 10px;
+	height: auto;
+	max-width: 100%;
+/*	display: inline-block;*/
+/*	width: inherit;*/
+}
+
 .page-footer {
 	background-color: white;
 	font-size: 2em;
