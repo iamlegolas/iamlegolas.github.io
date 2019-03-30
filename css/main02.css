@@ -425,18 +425,10 @@ html, body {
 }
 
 
-/*
-.fil-elem-text:visited {
-	border-style: inset;
-}
-*/
-
 video {
 	border-radius: 10px;
 	height: auto;
 	max-width: 100%;
-/*	display: inline-block;*/
-/*	width: inherit;*/
 }
 
 .page-footer {
