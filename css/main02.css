@@ -372,6 +372,7 @@ html, body {
 	display: block;
 }
 
+/*
 @media screen and (max-width: 767px) {	
 	#hm-sec-abt {
 		display: none;
@@ -388,7 +389,7 @@ html, body {
 		display: none;
 	}	
 }
-
+*/
 
 .filterDiv {
 	display: none;

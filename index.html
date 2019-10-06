@@ -36,12 +36,6 @@
 				</button>
 				<div class="collapse navbar-collapse " id="navbarNav">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#myBtnContainer">Portfolio</a>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="docs/Resume.pdf" target="_blank">Resume</a>
 						</li>
@@ -60,7 +54,7 @@
 <!--				<div class="col-lg-1 adj"></div>-->
 
 				<!-- hm-lg-sec = home-large-section --->
-				<div class="col-lg-6 col-md-6 hm-sec hm-sec-lg" id="about">
+				<div class="col-lg-3 col-md-12 hm-sec hm-sec-lg" id="about">
 					<img src="content/images/homepage_avatar_small.gif">
 					
 					<div class="hm-sec-lg-content">
@@ -70,9 +64,9 @@
 <!--						<span class="hm-sec-lg-title">Technical Artist</span>-->
 						
 						<div class="intro-info collapse show my-email" id="contactInfo">
-							<span id="hm-sec-lg-contact"><b>Contact : </b></span> <a class="info-link hm-sec-link" href="mailto:muhammadbintahirmir@gmail.com">mmir@andrew.cmu.edu</a>
+							<span id="hm-sec-lg-contact"><b>Contact : </b></span> <a class="info-link hm-sec-link" href="mailto:mbt.mir@gmail.com">mbt.mir@gmail.com</a>
 						</div>
-						
+						<!--
 						<button class="btn btn-primary btn-custom" id="hm-sec-btn-abt" type="button" data-toggle="collapse" data-target="#about-me-collapse" aria-expanded="false" aria-controls="collapseExample">
 							About
 						</button>
@@ -81,10 +75,6 @@
 							<span>
 								Hi! I'm an artist with a background in computer science and love being at the intersection of the two disciplines. <i>Tool creation</i> for art pipeline augmentation and <i>character technical direction</i> are things I enjoy. I have professional experience as a traditional animator on a <i>feature film</i>.
 								
-<!--
-								I have an undergraduate degree in <b>Computer Science</b> (with a focus in <b>HCI</b>) and have worked as a <b>Traditional Animator</b> on Pakistan’s first hand-drawn animated feature film, <i>'The Glassworker'</i>.
-								
--->
 								<br><br>I'm a graduate student at <b>Carnegie Mellon University</b>’s <b>Entertainment Technology Center (ETC)</b>. 
 								<br><br>
 								
@@ -92,13 +82,7 @@
 								<br>• Taking the <a href="http://graphics.cs.cmu.edu/nsp/course/15464-s19/www/">Technical Animation</a> course at CMU, exploring ways of automatically achieving realistic skin deformations.
 								
 								<br>• Working on a student short film as <i>Tools Programmer</i> and <i>Character Rigger</i>.
-<!--
-								Hi! I’m a graduate student at <b>Carnegie Mellon University</b>’s <b>Entertainment Technology Center (ETC)</b> currently working on rapidly prototyping entertainment experiences. 
-								<br><br>
-								I have an undergraduate degree in <b>Computer Science</b> (with a focus in <b>HCI</b>) and have worked as a <b>Traditional Animator</b> on Pakistan’s first hand-drawn animated feature film, <i>'The Glassworker'</i>.
--->
-								
-<!--								<br/><br/><b>I am currently seeking a Character Technical Director Internship for the summer of 2019.</b>-->
+
 							</span>
 							<br>
 							<button class="btn btn-primary btn-custom" id="collapse-close-btn" type="button" data-toggle="collapse" data-target="#about-me-collapse" aria-expanded="true" aria-controls="collapseExample">
@@ -106,31 +90,17 @@
 							</button>
 							
 						</div>
-
+						-->
 					</div> <!-- Content div -->
 				</div>
 				
 				
-				<div class="col-lg-5 col-md-6 hm-sec hm-sec-lg" id="hm-sec-abt">
+				<div class="col-lg-9 col-md-12 hm-sec hm-sec-lg" id="hm-sec-abt">
 						<div class="homepage-text" id="aboutMe">
-							<span>
-								Hi! I'm an artist with a background in computer science and love being at the intersection of the two disciplines. <i>Tool creation</i> for art pipeline augmentation and <i>character technical direction</i> are things I enjoy. I have professional experience as a traditional animator on a <i>feature film</i>.
-								
-<!--
-								I have an undergraduate degree in <b>Computer Science</b> (with a focus in <b>HCI</b>) and have worked as a <b>Traditional Animator</b> on Pakistan’s first hand-drawn animated feature film, <i>'The Glassworker'</i>.
-								
--->
-								<br><br>I'm a graduate student at <b>Carnegie Mellon University</b>’s <b>Entertainment Technology Center (ETC)</b>. 
-								<br><br>
-								
-								<b>WHAT I'M DOING THESE DAYS:</b>
-								<br>• Taking the <a href="http://graphics.cs.cmu.edu/nsp/course/15464-s19/www/">Technical Animation</a> course at CMU, exploring ways of automatically achieving realistic skin deformations.
-								
-								<br>• Working on a student short film as <i>Tools Programmer</i> and <i>Character Rigger</i>.
-								
-								
-<!--								<br/><br/><b>I am currently seeking a Character Technical Director Internship for the summer of 2019.</b>-->
-							</span>
+							<div class="project-media">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/s21zPEZFfmI?mute=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+							</div>
+							<span class="media-description m-dsc-center">Above: Rigging Showreel, October 2019.</span>
 				</div>
 			</div>
 				
@@ -140,15 +110,15 @@
 			<div class="row" id="myBtnContainer">
 				
 				<span class="hm-sec-title">Portfolio</span>
-				
+				<!--
 				<div class="col-12 hm-sec-sm-text" id="hm-sec-btn-row">
 					<button class="fil-elem-txt active-filter-elem" id ="ini-active" onclick="filterSelection('featured')">Featured</button>
 					<button class="fil-elem-txt" onclick="filterSelection('rigging')">Tech. Art</button>
 					<button class="fil-elem-txt" onclick="filterSelection('art')">Art, Animation</button>
 					<button class="fil-elem-txt" onclick="filterSelection('arvr')">CS, HCI</button>
-<!--					<button class="fil-elem-txt" onclick="filterSelection('programming')">Programming</button>-->
 					<button class="fil-elem-txt" onclick="filterSelection('all')">All</button>
 				</div>
+				-->
 			</div>
 			
 			<div class="row">
@@ -387,7 +357,7 @@
 			
 				<a title="LinkedIn" href="http://www.linkedin.com/in/mmir" target="_blank"><i class="fa fa-linkedin"></i></a>
 				<a title="Instagram" href="http://www.instagram.com/legolasshegolas" target="_blank"><i class="fa fa-instagram"></i></a>
-				<a title="Email" href="mailto:muhammadbintahirmir@gmail.com"><i class="fa fa-envelope"></i></a>
+				<a title="Email" href="mailto:mbt.mir@gmail.com"><i class="fa fa-envelope"></i></a>
 
 		</footer>
 		
