@@ -143,11 +143,34 @@ html, body {
 	height: auto;
 }
 
-.project-writeup img {
+.teaching-img {
 	display: block;
 	margin: auto;
-	width: 50%;
+	width: 55%;
 	height: auto;
+}
+
+.logo-img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 50%
+}
+
+@media screen and (max-width: 767px) {
+	.teaching-img {
+	display: block;
+	margin: auto;
+	width: 90%;
+	height: auto;
+	}
+	
+	.logo-img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+	}
 }
 
 .hm-sec-lg-content {
