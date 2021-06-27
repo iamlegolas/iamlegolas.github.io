@@ -448,6 +448,26 @@ ul {
 /*	display: block;*/
 }
 
+.twitter-thread {
+	font-size: 0.9em;
+	text-align: left;
+	font-weight: 300;
+	margin: 0% 8%;
+}
+
+#thread-title {
+	font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+	.twitter-thread {
+	font-size: 0.9em;
+	text-align: left;
+	font-weight: 300;
+	margin: 0% 0%;
+	}
+}
+
 .m-dsc-center {
 	text-align: center !important;
 	align-content: center;
